@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from 'src/app/interfaces/film-showing-response';
 import { MoviesService } from 'src/app/services/movies.service';
-import { FilmsShowing } from '../../interfaces/film-showing-response';
+
 
 @Component({
   selector: 'app-home',

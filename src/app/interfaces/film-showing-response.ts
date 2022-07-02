@@ -4,7 +4,7 @@
 //
 //   "Set quicktype target language"
 
-export interface FilmsShowing {
+export interface MoviesBoard {
     page:          number;
     results:       Movie[];
     total_pages:   number;
