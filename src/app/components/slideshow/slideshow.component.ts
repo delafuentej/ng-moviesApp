@@ -8,22 +8,48 @@ import { Movie } from '../../interfaces/film-showing-response';
   styleUrls: ['./slideshow.component.css']
 })
 export class SlideshowComponent implements OnInit, AfterViewInit {
-
+  
   @Input() movies:Movie[]=[];
-  constructor() { }
-
+ public swiper;
+ 
+  constructor() { 
+    
+   }
+ 
   ngAfterViewInit(): void {
-    const swiper = new Swiper('.swiper', {
+    
+    this.swiper = new Swiper('.swiper', {
       // Optional parameters
       
       loop: true,
-    
+      
+      effect: 'creative',
+      creativeEffect: {
+        prev: {
+          // will set `translateZ(-400px)` on previous slides
+          translate: [0, 0, -400],
+        },
+        next: {
+          // will set `translateX(100%)` on next slides
+          translate: ['100%', 0, 0],
+        },
+      }
       
     });
-  }
+    
+
+    }
+  
 
   ngOnInit(): void {
     console.log(this.movies)
+  }
+  onSlideNext(){
+    this.swiper.slideNext();
+  }
+  onSlidePrev(){
+    this.swiper.slidePrev();
+
   }
 
 }
