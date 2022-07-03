@@ -6,10 +6,10 @@
 
             <h3 class="text-center mt-2 ">{{movie.title}}</h3>
             <div class="row ">
-                <div class="col-10 text-warning ">
+                <div class="col-10 text-warning text-center ">
                     <star-rating [value]="movie.vote_average" checkcolor=" gold " uncheckedcolor="grey " size="16px " [totalstars]="10" [readonly]=false></star-rating>
                 </div>
-                <div class=" col-2 text-white ">
+                <div class=" col-2 text-white bold">
                     {{movie.vote_average | number:'1.1-2'}}
                 </div>
 
