@@ -1,5 +1,5 @@
 <h1>Movies Board</h1>
-<div class="row" *ngIf="movies.length>0">
+<div class="row" *ngIf="movies.length > 0">
 
     <div class="col">
         <app-slideshow [movies]="movies"></app-slideshow>
@@ -7,3 +7,7 @@
     </div>
 </div>
 <h2 class="mt-5">Movies</h2>
+
+
+
+<app-movies-poster-grid [movies]="movies" *ngIf="movies.length > 0"></app-movies-poster-grid>
