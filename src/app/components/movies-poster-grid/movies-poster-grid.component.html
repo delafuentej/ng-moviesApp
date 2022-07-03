@@ -4,7 +4,7 @@
         <div class="card bg-black poster">
             <img class="img-fluid poster" [src]="movie.poster_path | poster" alt={{movie.title}}>
 
-            <h3 class="text-center mt-2 ">movie.title</h3>
+            <h3 class="text-center mt-2 ">{{movie.title}}</h3>
             <div class="row ">
                 <div class="col-10 text-warning text-center ">
                     <star-rating [value]="movie.vote_average" checkcolor=" gold " uncheckedcolor="grey " size="16px " [totalstars]="10" [readonly]=false></star-rating>
