@@ -1,7 +1,10 @@
-<h1> Search Movies
-    <small></small>
+<h1> Search Movies:
+    <small class="text-success">{{searchTerm}}</small>
 </h1>
 <hr>
 <div class="row">
-    <div class="col">postergrid</div>
+    <div class="col">
+
+        <app-movies-poster-grid [movies]="movies"></app-movies-poster-grid>
+    </div>
 </div>

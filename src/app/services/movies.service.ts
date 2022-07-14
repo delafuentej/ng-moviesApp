@@ -44,6 +44,10 @@ export class MoviesService {
     }))
    
   }
+
+  resetFilmsShowing(){
+    this.boardingPage=1;
+  }
   searchFilms(searchTerm:string): Observable<Movie[]>{
     const params= {...this.params, page:1, query:searchTerm};
 
