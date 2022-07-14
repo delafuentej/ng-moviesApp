@@ -44,4 +44,11 @@ export class MoviesService {
     }))
    
   }
+  searchFilms(searchTerm:string): Observable<Movie[]>{
+    const params= {...this.params, page:1, query:searchTerm};
+
+    //https://api.themoviedb.org/3/search/movie
+    return this.http.get<MoviesBoard>(`${ this.baseUrl }/search/movie`,{params:params})
+    .pipe(map(res => res.results))
+  }
 }
