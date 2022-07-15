@@ -7,7 +7,7 @@ import { MoviesPosterGridComponent } from './movies-poster-grid/movies-poster-gr
 import { RatingModule } from 'ng-starrating';
 import { PipesModule } from '../pipes/pipes.module';
 import { CastSlideShowComponent } from './cast-slide-show/cast-slide-show.component';
-import { SwiperModule } from "swiper/angular";
+
 
 
 
@@ -31,7 +31,7 @@ import { SwiperModule } from "swiper/angular";
     RouterModule,
     RatingModule,
     PipesModule,
-    SwiperModule
+    
   ]
 })
 export class ComponentsModule { }
