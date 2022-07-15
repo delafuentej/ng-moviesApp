@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
 import { MoviesBoard, Movie } from '../interfaces/film-showing-response';
+import { MovieDetailsType } from '../interfaces/movie-details-response';
 
 
 @Injectable({
@@ -56,5 +57,9 @@ export class MoviesService {
 
   resetFilmsShowing(){
     this.boardingPage=1;
+  }
+
+  getMovieDetails(id:number){
+    return this.http.get<MovieDetailsType>(`${ this.baseUrl}/movie/${id}`, {params:this.params})
   }
 }
