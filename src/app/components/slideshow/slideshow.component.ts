@@ -18,7 +18,7 @@ export class SlideshowComponent implements OnInit, AfterViewInit {
  
   ngAfterViewInit(): void {
     
-    this.swiper = new Swiper('.swiper', {
+    this.swiper = new Swiper('.swiper-container', {
       // Optional parameters
       
       loop: true,

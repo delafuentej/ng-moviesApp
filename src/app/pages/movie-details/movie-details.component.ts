@@ -32,7 +32,9 @@ export class MovieDetailsComponent implements OnInit {
    
 
     this.moviesService.getCast(id).subscribe( cast =>{
-        this.cast=cast
+
+
+        this.cast=cast.filter( item=> item.profile_path !== null)
       console.log('cast', cast)})
   }
   backToHome(){
