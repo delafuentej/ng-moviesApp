@@ -6,7 +6,8 @@ import { Router } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit{
+  
 
   constructor(private router: Router) { }
 
@@ -22,5 +23,7 @@ export class NavbarComponent implements OnInit {
     
     console.log(searchTerm)
   }
+
+  }
     
-}
+

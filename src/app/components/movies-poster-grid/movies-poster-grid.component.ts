@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Movie } from 'src/app/interfaces/film-showing-response';
 import { MoviesService } from 'src/app/services/movies.service';
 
@@ -10,10 +11,15 @@ import { MoviesService } from 'src/app/services/movies.service';
 export class MoviesPosterGridComponent implements OnInit {
   @Input() movies:Movie[]=[];
 
-  constructor(private moviesService: MoviesService) { }
+  constructor(private moviesService: MoviesService, private router: Router) { }
 
   ngOnInit(): void {
     console.log('moviesPosterGrid',this.movies)
+  }
+
+  seeDetailsMovie(movie: Movie){
+    this.router.navigate(['/movie', movie.id])
+    console.log(movie)
   }
 
 }

@@ -2,7 +2,7 @@
 
     <div class="col-md-3 mt-5" *ngFor="let movie of movies">
         <div class="card bg-black poster">
-            <img class="img-fluid poster" [src]="movie.poster_path | poster" alt={{movie.title}}>
+            <img (click)="seeDetailsMovie( movie )" class="img-fluid poster" [src]="movie.poster_path | poster" alt={{movie.title}}>
 
             <h3 class="text-center mt-2 ">{{movie.title}}</h3>
             <div class="row ">
