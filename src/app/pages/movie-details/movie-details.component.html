@@ -33,9 +33,14 @@
 
 </div>
 
-<div class="row mt-5 animate__animated animate__bounce animate " *ngIf=" cast.length> 0">
-    <div class="col">
-        <app-cast-slide-show [cast]=" cast "></app-cast-slide-show>
-    </div>
+<div class="mt-5">
+    <h2>Actors</h2>
 
-</div>v
+    <div class="row animate__animated  " *ngIf=" cast.length> 0">
+        <div class="col">
+            <app-cast-slide-show [cast]=" cast "></app-cast-slide-show>
+        </div>
+
+    </div>v
+
+</div>
