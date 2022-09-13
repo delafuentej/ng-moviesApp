@@ -1,16 +1,21 @@
 <nav class="navbar navbar-expand-sm bg-black p-4 mt-0">
     <div class="container-fluid">
-        <a class="navbar navbar-brand text-success" [routerLink]="['/home']">Movies App</a>
+        <a class="navbar navbar-brand text-white" [routerLink]="['/home']">
+
+            <h1 class="mx-3 text-center">Movies App</h1>
+            <img src="../../../assets/images/screen_2x_bearbeitet.png" width="100px" height="100px" alt="screen_2x" class="screen_2x">
+
+        </a>
 
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class=" collapse navbar-collapse " id="navbarSupportedContent ">
 
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
 
             </ul>
-            <div class="d-flex">
-                <input (keyup.enter)="searchMovie(searchTerm.value)" class="form-control me-2" type="search" placeholder="Search Movie" aria-label="Search" #searchTerm>
-                <button (click)="searchMovie(searchTerm.value)" class="btn btn-success" type="submit">Search</button>
+            <div class="d-flex ">
+                <input (keyup.enter)="searchMovie(searchTerm.value) " class="form-control me-2 " type="search " placeholder="Search Movie " aria-label="Search " #searchTerm>
+                <button (click)="searchMovie(searchTerm.value) " class="btn btn-success " type="submit ">Search</button>
             </div>
         </div>
     </div>
